@@ -13,30 +13,5 @@ import { ListGroupMenuComponent } from './components/list-group-menu/list-group-
 })
 
 export class AppComponent {
-  // name = 'Markos';
-
-  // // Step 1: One way binding of data
-  // person = {
-  //   givenName: 'Markos',
-  //   surName: 'Karampatsis',
-  //   age:52,
-  //   email:'marka@aueb.gr'
-  // }
-
-  // Step 3: Component Input
-  // person0: Person = {
-  //   givenName: "Christodoulos",
-  //   surName: "Fragkoudakis",
-  //   age:55,
-  //   email: "chfrag@aueb.gr",
-  //   address: "Athens, Greece"
-  // }
-
-  // person1: Person = {
-  //   givenName: "John",
-  //   surName: "Doe",
-  //   age: 32,
-  //   email: "john@example.com",
-  //   address: "New York, USA"
-  // }
+  
 }

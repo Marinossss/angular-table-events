@@ -3,7 +3,7 @@ import { EPerson, ManyPerson } from 'src/app/shared/interfaces/eperson';
 import { SimpleDatatableComponent } from 'src/app/components/simple-datatable/simple-datatable.component';
 import {
   Dialog,
-  DialogRef,
+  DialogRef,    // https://material.angular.dev/cdk/dialog/overview#initial-setup
   DIALOG_DATA,
   DialogModule
 } from '@angular/cdk/dialog';
