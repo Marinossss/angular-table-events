@@ -1,4 +1,8 @@
-<div>
+@if (!personInput) {
+  <div class="alert alert-danger text-center">No person Details</div>
+} @else {
+
+  <div>
     <!-- <h1>From person table component</h1> -->
     <!-- <table class="table table-bordered w-50">
       <caption>Person Details</caption>
@@ -23,19 +27,19 @@
       <caption>Person Details</caption>
       <tr>
         <td class="fw-semibold text-end">First Name</td>
-        <td class="ps-2">{{personInput?.givenName}}</td>
+        <td class="ps-2">{{personInput!.givenName}}</td>
       </tr>
       <tr>
         <td class="fw-semibold text-end">Last Name</td>
-        <td class="ps-2">{{personInput?.surName}}</td>
+        <td class="ps-2">{{personInput!.surName}}</td>
       </tr>
       <tr>
         <td class="fw-semibold text-end">Age</td>
-        <td class="ps-2">{{personInput?.age}}</td>
+        <td class="ps-2">{{personInput!.age}}</td>
       </tr>
       <tr>
         <td class="fw-semibold text-end">Email</td>
-        <td class="ps-2">{{personInput?.email}}</td>
+        <td class="ps-2">{{personInput!.email}}</td>
       </tr>
       @if(isPerson()){
         <tr>
@@ -50,4 +54,5 @@
         </tr>
       }
     </table>
-</div>
+  </div>
+}
