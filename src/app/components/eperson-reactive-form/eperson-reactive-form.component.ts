@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { FocusMonitor } from '@angular/cdk/a11y';
+import { EPerson } from 'src/app/shared/interfaces/eperson';
 
 @Component({
   selector: 'app-eperson-reactive-form',
@@ -15,9 +16,9 @@ import { FocusMonitor } from '@angular/cdk/a11y';
 export class EpersonReactiveFormComponent {
 
   form = new FormGroup({
-    givenName : new FormControl('Default', Validators.required),
-    surnName: new FormControl('Default', Validators.required),
-    age: new FormControl('18', [
+    givenName : new FormControl('', Validators.required),
+    surnName: new FormControl('', Validators.required),
+    age: new FormControl(18, [
       Validators.required,
       Validators.pattern('^[0-9]*$'),
       Validators.min(18),
@@ -27,4 +28,20 @@ export class EpersonReactiveFormComponent {
     education: new FormControl('', Validators.required)
   })
 
+  onSubmit(data: any) {
+    console.log("Data", data)
+    console.log(this.form)
+    console.log("givenName>>", this.form.controls['givenName'].value)
+    // this.form.controls["surnName"].setValue("Papakis")
+  }
+
+  onSetValue(){
+    this.form.setValue({
+      givenName: "Kostas",
+      surnName: "lalakis",
+      age: 24,
+      email:"kostas@example.com",
+      education: "Bachelor degree"
+    })
+  }
 }
