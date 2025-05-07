@@ -8,7 +8,7 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Last Name</mat-label>
-            <input type="text" matInput formControlName="surnName">
+            <input type="text" matInput formControlName="surName">
             <mat-error>Last Name is required field</mat-error>
         </mat-form-field>
         <mat-form-field>
@@ -32,7 +32,7 @@
             <mat-error>Education is required</mat-error>
         </mat-form-field>
     </form>
-    <button mat-flat-button color="primary" (click)="onSubmit(form.value)" [disabled]="form.invalid">
+    <button mat-flat-button color="primary" (click)="onSubmit()" [disabled]="form.invalid">
         submit
     </button>
     <button (click)="onSetValue()">Set value</button>
