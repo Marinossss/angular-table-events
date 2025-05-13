@@ -22,8 +22,14 @@
 
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput type="text" formControlName="email">
-            <mat-error>Email is missing or invalid</mat-error>
+            <input matInput type="text" formControlName="email" (blur)="check_dublicate_email()">
+            @if(form.get('email')?.hasError('duplicateEmail')) {
+                <mat-error>Emails is already registered</mat-error>
+            } @else {
+                @if (form.get('email')?.invalid && form.get('email')?.touched) {
+                    <mat-error>Email is missing or invalid</mat-error>
+                }
+            }
         </mat-form-field>
 
         <div class="d-flex gap-2" formGroupName="address">
