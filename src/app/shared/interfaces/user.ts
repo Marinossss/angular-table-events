@@ -9,3 +9,8 @@ export interface User {
         road: string;
     }
 }
+
+export interface Credentials {
+    username: string;
+    password: string;
+}
