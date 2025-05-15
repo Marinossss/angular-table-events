@@ -14,7 +14,7 @@ export const adminRoleGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  return router.navigate(['welcome'])
+  return router.navigate(['restricted-content'])
 
 
   
